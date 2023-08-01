@@ -1,29 +1,28 @@
-import { BrowserRouter,Routes,Route,Link } from 'react-router-dom';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
+import CreateUser from './components/CreateUser';
+import Home from './pages/Home';
+import EditUser from './pages/editUser';
+import ListUser from './pages/listUser';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <h5>React CRUD operations using PHP API and MySQL</h5>
-      <BrowserRouter>
-      <nav>
-        <ul>
-          <li>
-            <Link to ="/">List Users</Link>
-          </li>
-          <li>
-            <Link to="user/create">Create User</Link>
-          </li>
-        </ul>
-      </nav>
+
+    //Configuration des routes
+      <BrowserRouter>   
       <Routes>
-        <Route>
+        <Route path='/' element = {<Home/>} />
+        <Route path='/create' element = {<CreateUser/>}/>
+        <Route path="/edit" element= {<EditUser/>} /> 
+        <Route path="/list" element ={<ListUser/>} /> 
+        <Route path='*' element = {<Home/>}/>
           
-        </Route>
+        
       </Routes>
       </BrowserRouter>
-    </div>
   );
-}
+};
 
 export default App;
