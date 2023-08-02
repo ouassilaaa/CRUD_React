@@ -6,7 +6,7 @@ const ListUser = () => {
         <div>
             <Navigation/>
 
-            <h1>List Users</h1>
+            <h2>User List 📝</h2>
 
         </div>
     );

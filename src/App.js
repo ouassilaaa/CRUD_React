@@ -1,9 +1,9 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
-import CreateUser from './components/CreateUser';
 import Home from './pages/Home';
-import EditUser from './pages/editUser';
-import ListUser from './pages/listUser';
+import EditUser from './pages/EditUser';
+import ListUser from './pages/ListUser';
+import CreateUser from './pages/CreateUser';
 
 
 
@@ -14,8 +14,8 @@ function App() {
       <BrowserRouter>   
       <Routes>
         <Route path='/' element = {<Home/>} />
-        <Route path='/create' element = {<CreateUser/>}/>
         <Route path="/edit" element= {<EditUser/>} /> 
+        <Route path="/create" element= {<CreateUser/>} /> 
         <Route path="/list" element ={<ListUser/>} /> 
         <Route path='*' element = {<Home/>}/>
           

@@ -4,7 +4,7 @@ import{NavLink} from "react-router-dom";
 const Navigation = () => {
     return (
         <div className='navigation'>
-            <h5>React CRUD operations using PHP API and MySQL</h5>
+            <h1>React CRUD operations using PHP API and MySQL</h1>
             <nav>
                 <ul>
                     <NavLink to = "/"><li>Home</li></NavLink>
