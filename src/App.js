@@ -3,8 +3,7 @@ import './App.css';
 import Home from './pages/Home';
 import EditUser from './pages/EditUser';
 import ListUser from './pages/ListUser';
-import CreateUser from './pages/CreateUser';
-
+import Form from './pages/Form';
 
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element = {<Home/>} />
         <Route path="/edit" element= {<EditUser/>} /> 
-        <Route path="/create" element= {<CreateUser/>} /> 
+        <Route path="/create" element= {<Form/>} /> 
         <Route path="/list" element ={<ListUser/>} /> 
         <Route path='*' element = {<Home/>}/>
           
