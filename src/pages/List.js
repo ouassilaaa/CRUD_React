@@ -1,15 +1,17 @@
 import React from 'react';
+import Dashboard from '../components/Dashboard';
 import Navigation from '../components/Navigation';
+import"./list.css"; 
 
-const ListUser = () => {
+
+
+const List = () => {
     return (
         <div>
             <Navigation/>
-
-            <h2>User List 📝</h2>
-
+            <Dashboard/>
         </div>
     );
 };
 
-export default ListUser;
+export default List;

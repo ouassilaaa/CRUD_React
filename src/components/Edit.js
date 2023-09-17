@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ListUser = () => {
+const Edit = () => {
     return (
         <div>
-            
+            <h1>test</h1>
         </div>
     );
 };
 
-export default ListUser;
+export default Edit;

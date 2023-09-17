@@ -1,9 +1,14 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
+import Edit from '../components/Edit';
+
 
 const EditUser = () => {
     return (
         <div>
-            <h2>Edit User</h2>
+            <Navigation/>
+            <Edit/>
+
         </div>
     );
 };

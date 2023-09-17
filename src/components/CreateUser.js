@@ -70,9 +70,16 @@
 
 import { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+
+
 // import './App.css';
  
-function CreateUser() {
+const CreateUser = ()=> {
+
+      const Navigate= useNavigate();
+
+
   const [name,setName] = useState('');
   const [mobile,setMobile] = useState('');
   const [email,setEmail] = useState('');
@@ -88,17 +95,20 @@ function CreateUser() {
       alert("Email has left Blank!");
     }
     else{
-      const url = 'http://localhost/api/index.php';
+      const url = 'http://localhost/api/manager/userManager.php';
       let fData = new FormData();
       fData.append('name', name);
       fData.append('mobile', mobile);
       fData.append('email', email);
       axios.post(url, fData).then(response=> alert(response.data)).catch(error=> alert(error));
+      Navigate('/'); 
+
+      
     }
   }
  
   return (
-    <form>
+    <form action="" method="POST">
                   <div className="form-outline mb-4">
                     <label className="form-label" for="name">Your Name</label>
                     <input type="text" className="form-control form-control-lg" name="name" id="name" value={name} onChange={(e) => setName(e.target.value)} />
